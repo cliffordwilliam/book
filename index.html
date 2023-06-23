@@ -4,8 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book</title>
+    <style>
+        .container {
+            margin: auto;
+            max-width: min(95%, 80rem);
+        }
+        nav {
+            border-bottom: 1px solid #000;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        nav > .container {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #menu {
+            margin-top: 1rem;
+            flex-basis: 100%;
+            display: none;
+        }
+        #menu.show {
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            margin: 3.75rem 0 0 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        main > .container > article > section {
+            display: flex;
+            flex-direction: column;
+        }
+        main > .container > article > section > * {
+            display: block;
+        }
+        article {
+            display: flex;
+        }
+        section {
+            margin-top: 1.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 2rem 0 3rem 0;
+            text-align: center;
+        }
+        h3 {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+        p, li {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+        ul {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Book</h1>
+    <nav>
+        <div class="container">
+            <h1>Book</h1>
+            <button id="toggler">Contents</button>
+            <div id="menu"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <article>
+                <section>
+                    <h2>Command Line</h2>
+                    <h3>Goals</h3>
+                    <p>Open a terminal on your computer.</p>
+                    <ul>
+                        <li>Linux: Open the programs menu and search for “Terminal”. You can also open the terminal by pressing CTRL + ALT + T on your keyboard.</li>
+                        <li>macOS: Open your Applications > Utilities folder and find “Terminal”. You can also use Spotlight search to open Terminal. Press CMD + SPACE to open Spotlight, and search for “Terminal”. Press RETURN to open it.</li>
+                    </ul>
+                    <p>Most lessons will contain questions that you should be able to answer before moving on. Some of the lessons will ask you to complete exercises. In addition, we provide several projects throughout the curriculum to help you grow your understanding by actually building things.</p>
+                    <h3>Hello</h3>
+                    <p>This curriculum works by pulling together the best content from across the internet for learning a particular topic. In each lesson, we’ll introduce the topic and try to provide some useful context before pointing you to external resources made by others.</p>
+                    <p>Most lessons will contain questions that you should be able to answer before moving on. Some of the lessons will ask you to complete exercises. In addition, we provide several projects throughout the curriculum to help you grow your understanding by actually building things.</p>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script>
+        var toggler = document.querySelector("#toggler");
+        var menu = document.querySelector("#menu");
+        var headings = document.querySelectorAll("body h2");
+
+        headings.forEach(function(heading){
+            var anchor = document.createElement("a");
+            anchor.textContent = heading.textContent;
+            anchor.href = "#" + heading.id;
+            menu.appendChild(anchor);
+        });
+
+        toggler.onclick = function(){
+            menu.classList.toggle("show");
+        };
+    </script>
 </body>
 </html>
