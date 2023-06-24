@@ -3,117 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book</title>
-    <style>
-        .container {
-            margin: auto;
-            max-width: min(95%, 80rem);
-        }
-        nav {
-            border-bottom: 1px solid #000;
-            background-color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-        nav > .container {
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        #menu {
-            margin-top: 1rem;
-            flex-basis: 100%;
-            display: none;
-        }
-        #menu.show {
-            display: flex;
-            flex-direction: column;
-        }
-        body {
-            margin: 3.75rem 0 0 0;
-        }
-        h1 {
-            margin: 0;
-        }
-        main > .container > article > section {
-            display: flex;
-            flex-direction: column;
-        }
-        main > .container > article > section > * {
-            display: block;
-        }
-        article {
-            display: flex;
-        }
-        section {
-            margin-top: 1.5rem;
-        }
-        h2 {
-            font-size: 1.5rem;
-            line-height: 2rem;
-            margin: 2rem 0 3rem 0;
-            text-align: center;
-        }
-        h3 {
-            margin: 1rem 0;
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-        }
-        p, li {
-            margin: 0 0 1.5rem 0;
-            font-size: 1.25rem;
-            line-height: 2rem;
-        }
-        ul {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/utils.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/queries.css">
+    <title>Document</title>
 </head>
-<body>
-    <nav>
-        <div class="container">
-            <h1>Book</h1>
-            <button id="toggler">Contents</button>
-            <div id="menu"></div>
-        </div>
-    </nav>
+<body class="container">
+    <header>
+        <nav class="navbar">
+            <a href="./index.html">
+                <img src="./assets/logo.png" alt="rt-logo">
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="#000" viewBox="0 0 16 16" class="navbar-toggler">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <div class="navbar-collapse">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <div class="dropdown-toggler">
+                    <div class="text-icon-container">
+                        <span>Services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#">Flowback & Solids Removal</a>
+                        <a href="#">Well Unloading & Blow Down</a>
+                        <a href="#">Gas Compression</a>
+                        <a href="#">Product Testing & Well Clean Up</a>
+                        <a href="#">Rig Cooling System</a>
+                        <a href="#">Water Injection (SWIMS & PRISM)</a>
+                        <a href="#">Hydrocyclone - Desanders & Deoilers</a>
+                        <a href="#">Chemical Injection System</a>
+                        <a href="#">Frac Tree Systems</a>
+                        <a href="#">High Pressure Piping & Valving</a>
+                        <a href="#">Flowline Safety Restraint System</a>
+                        <a href="#">Electronic Data Acquisition System</a>
+                    </div>
+                </div>
+                <a href="#">Equipment Rental</a>
+                <a href="#">QHSE</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </nav>
+    </header>
     <main>
-        <div class="container">
-            <article>
-                <section>
-                    <h2>Command Line</h2>
-                    <h3>Goals</h3>
-                    <p>Open a terminal on your computer.</p>
-                    <ul>
-                        <li>Linux: Open the programs menu and search for “Terminal”. You can also open the terminal by pressing CTRL + ALT + T on your keyboard.</li>
-                        <li>macOS: Open your Applications > Utilities folder and find “Terminal”. You can also use Spotlight search to open Terminal. Press CMD + SPACE to open Spotlight, and search for “Terminal”. Press RETURN to open it.</li>
-                    </ul>
-                    <p>Most lessons will contain questions that you should be able to answer before moving on. Some of the lessons will ask you to complete exercises. In addition, we provide several projects throughout the curriculum to help you grow your understanding by actually building things.</p>
-                    <h3>Hello</h3>
-                    <p>This curriculum works by pulling together the best content from across the internet for learning a particular topic. In each lesson, we’ll introduce the topic and try to provide some useful context before pointing you to external resources made by others.</p>
-                    <p>Most lessons will contain questions that you should be able to answer before moving on. Some of the lessons will ask you to complete exercises. In addition, we provide several projects throughout the curriculum to help you grow your understanding by actually building things.</p>
-                </section>
-            </article>
-        </div>
+        <section>
+            <div class="carousel" id="carousel1">
+                <div class="carousel-container">
+                    <div class="carousel-item show">
+                        <div class="hero-img-1">
+                            <div class="hero-container">
+                                <h1 class="display-5">We are a global technology company, driving energy innovation for a balanced planet.</h1>
+                                <p>Planetary problems. Global solutions. Local deployment.</p>
+                                <div class="hero-button-container">
+                                    <button class="btn secondary">
+                                        <div class="text-icon-container">
+                                            <span>Learn More</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="hero-img-2">
+                            <div class="hero-container">
+                                <h1 class="display-5">Driving energy innovation</h1>
+                                <p class="hero-lead">We have a bold vision for what energy can be—and with our technology and expertise, we are delivering on it.</p>
+                                <div class="hero-button-container">
+                                    <button class="btn secondary">
+                                        <div class="text-icon-container">
+                                            <span>Learn More</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.875rem" height="1.875rem" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#fff" viewBox="0 0 16 16" class="prev-button">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#fff" viewBox="0 0 16 16" class="next-button">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </section>
     </main>
-    <script>
-        var toggler = document.querySelector("#toggler");
-        var menu = document.querySelector("#menu");
-        var headings = document.querySelectorAll("body h2");
-
-        headings.forEach(function(heading){
-            var anchor = document.createElement("a");
-            anchor.textContent = heading.textContent;
-            anchor.href = "#" + heading.id;
-            menu.appendChild(anchor);
-        });
-
-        toggler.onclick = function(){
-            menu.classList.toggle("show");
-        };
-    </script>
+    <script src="./js/navbar-collapse.js" type="text/javascript"></script>
+    <script src="./js/carousel.js" type="text/javascript"></script>
+    <script src="./js/dropdown.js" type="text/javascript"></script>
 </body>
 </html>

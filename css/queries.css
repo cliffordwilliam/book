@@ -1,0 +1,34 @@
+@media (min-width: 36rem){
+}
+@media (min-width: 48rem){
+}
+@media (min-width: 62rem){
+}
+@media (min-width: 75rem){
+    /* NO burger in pc */
+    .navbar-toggler {
+        display: none;
+    }
+    /* Force to appear in pc */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: auto !important;
+        overflow: visible;
+        /* dont wrap down */
+        flex-basis: auto;
+    }
+    /* Dropdown is abs in pc */
+    .navbar .dropdown-menu {
+        position: absolute;
+    }
+    /* Only need h pad in pc */
+    .navbar-collapse > * {
+        padding: 0 1.5rem;
+        flex: 1;
+        justify-content: center;
+    }
+}
+@media (min-width: 87.5rem){
+}
